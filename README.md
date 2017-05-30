@@ -20,11 +20,11 @@ The goals / steps of this project are the following:
 ### 1. How the pipeline works.
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied a gaussian blur to the output of grayscale.
-Then I  convert this image into edges with Canny function. I created a mask to get only the region of interest of Canny output. To detect the lines from Canny with mask, I applied hough transformation with tuned parameters. Finaly I return the lines (in red) on the original image.
+Then I  convert this image into edges with Canny function. I created a mask to get only the region of interest of Canny output. In order to detect the lines from Canny with mask, I applied hough transformation with tuned parameters. Finaly I return the lines (in red) combined with original image.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by computing linear extrapolation between a virtual lane (could be done with a mask for example) and the bottom of the image. The thickness have been up and mixed with alpha filter to looks like the exemple video. Left and right lanes are separated by using they slope signs (negative or positive).
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by computing linear extrapolation between a virtual lane (like a horizon, could be done with a mask for example) and the bottom of the image. The thickness have been up and mixed with alpha filter to looks like the exemple video. Left and right lanes are separated by using they slope signs (negative or positive).
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+This is the result of the entire pipeline: 
 
 ![alt text][image1]
 
