@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. How the pipeline works.
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied a gaussian blur to the output of grayscale.
 Then I  convert this image into edges with Canny function. I created a mask to get only the region of interest of Canny output. To detect the lines from Canny with mask, I applied hough transformation with tuned parameters. Finaly I return the lines (in red) on the original image.
@@ -29,7 +29,7 @@ If you'd like to include images to show how the pipeline works, here is how to i
 ![alt text][image1]
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 
 One potential shortcoming would be what would happen when the road is curving because the pipeline is not adaped to this case (as we can see for the challenge video).
@@ -38,7 +38,7 @@ Another shortcoming could be a change of the resolution or another point of view
 
 I wonder what could happen with city roads with intersections and other subtleties.
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to the pipeline
 
 A possible improvement would be to use cubic extrapolation to draw lines to be adapted to every situations of curve road.
 
